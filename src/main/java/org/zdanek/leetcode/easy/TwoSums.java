@@ -1,10 +1,9 @@
-package org.zdanek.leetcode;
+package org.zdanek.leetcode.easy;
 
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-
+//easy
 public class TwoSums {
 
     public int[] twoSum(int[] nums, int target) {
