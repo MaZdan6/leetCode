@@ -40,14 +40,6 @@ public class RomanToInteger {
                     continue;
                 }
             }
-            if (roman.equals("I")) {
-                if (romanNext.equals("V") || romanNext.equals("X")) {
-                    arabic = map.get(romanNext) - map.get("I");
-                    arabics.add(arabic);
-                    i++;
-                    continue;
-                }
-            }
             //X jest przed  (L lub C) => (L lub C) - X
             if (roman.equals("X")) {
                 if (romanNext.equals("L") || romanNext.equals("C")) {
