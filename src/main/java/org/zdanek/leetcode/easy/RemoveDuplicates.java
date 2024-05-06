@@ -9,37 +9,38 @@ import java.util.ArrayList;
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
 
-        //remove the duplicates in-place such that each unique element appears only once.
-        //The relative order of the elements should be kept the same.
-        //Then return the number of unique elements in nums.
 
         int num;
         int numNext = 0;
-        int k=0;
-        int numDuplicates=0;
-        ArrayList<Integer> numsK= new ArrayList<Integer>();
+
+        int numDuplicates = 0;
+        ArrayList<Integer> numsK = new ArrayList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             num = nums[i];
             numNext = 0;
-            numDuplicates=0;
+            numDuplicates = 0;
             if (i + 1 < nums.length) {
                 numNext = nums[i + 1];
             }
 
-            while (num==numNext) {
+            while (num == numNext) {
                 numDuplicates++;
-                numNext = nums[i+1+numDuplicates];
+                if(i + 1 + numDuplicates<nums.length){
+                    numNext = nums[i + 1 + numDuplicates];
+                }else {
+                    break;
+                }
             }
-            i=i+numDuplicates;
+            i = i + numDuplicates;
             numsK.add(num);
 
         }
 
-        numsK.forEach(e->{
-            System.out.println(e);
-        });
-        System.out.println("size: "+numsK.size());
-        System.out.println("k: "+k);
+        for (int i = 0; i < numsK.size(); i++) {
+            nums[i] = numsK.get(i);
+        }
+/*        System.out.println("size: "+numsK.size());
+        System.out.println("k: "+k);*/
 
         return numsK.size();
     }
