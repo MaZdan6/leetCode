@@ -22,7 +22,6 @@ class MergeSortedArrayTest {
 
 
     @ParameterizedTest
-
     @MethodSource("testParameters")
     void mergeTest(int[] nums1, int m, int[] nums2, int n, int[] expectedValue) {
 
