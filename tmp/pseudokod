@@ -1,0 +1,8 @@
+
+
+int maxProfit
+
+dla każdego elementu
+    iteruj i+1
+    if różnica > maxProfit
+        then zmień max Profit
