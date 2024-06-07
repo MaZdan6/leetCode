@@ -1,4 +1,4 @@
-package org.zdanek.leetcode.easy;
+package org.zdanek.leetcode.hashmap;
 
 
 import java.util.Arrays;
